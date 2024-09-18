@@ -6,6 +6,7 @@ package gdse;
 
 import DBConnection.DBConnection;
 import View.LayoutFrame;
+import View.OderForm;
 import java.sql.SQLException;
 
 /**
@@ -22,6 +23,9 @@ public class Gdse {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         DBConnection.getInstance().getConnetion();
           new LayoutFrame().setVisible(true);
-    }
+      
+        
     
+    }
+   
 }
