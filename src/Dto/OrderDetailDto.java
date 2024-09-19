@@ -9,6 +9,8 @@ package Dto;
  * @author USER
  */
 public class OrderDetailDto {
+
+    
     
     private String ItemCode;
     private int qty;

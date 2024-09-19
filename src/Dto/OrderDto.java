@@ -4,6 +4,8 @@
  */
 package Dto;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author USER
@@ -11,16 +13,26 @@ package Dto;
 public class OrderDto {
     
     private String orderId;
-    private int orderDate;
+    private String orderDate;
     private String custId;
+
+    private ArrayList<OrderDetailDto>orderDetailDtos ;
 
     public OrderDto() {
     }
 
-    public OrderDto(String orderId, int orderDate, String custId) {
+    public OrderDto(String orderId, String orderDate, String custId, ArrayList<OrderDetailDto> orderDetailDtos) {
         this.orderId = orderId;
         this.orderDate = orderDate;
         this.custId = custId;
+        this.orderDetailDtos = orderDetailDtos;
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        return "OrderDto{" + "orderId=" + getOrderId() + ", orderDate=" + getOrderDate() + ", custId=" + getCustId() + ", orderDetailDtos=" + getOrderDetailDtos() + '}';
     }
 
     /**
@@ -40,14 +52,14 @@ public class OrderDto {
     /**
      * @return the orderDate
      */
-    public int getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
     /**
      * @param orderDate the orderDate to set
      */
-    public void setOrderDate(int orderDate) {
+    public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -64,5 +76,22 @@ public class OrderDto {
     public void setCustId(String custId) {
         this.custId = custId;
     }
+
+    /**
+     * @return the orderDetailDtos
+     */
+    public ArrayList<OrderDetailDto> getOrderDetailDtos() {
+        return orderDetailDtos;
+    }
+
+    /**
+     * @param orderDetailDtos the orderDetailDtos to set
+     */
+    public void setOrderDetailDtos(ArrayList<OrderDetailDto> orderDetailDtos) {
+        this.orderDetailDtos = orderDetailDtos;
+    }
+
+ 
+    
     
 }
